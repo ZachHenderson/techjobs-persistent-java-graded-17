@@ -12,9 +12,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.*;
-
-
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -68,8 +65,6 @@ public class HomeController {
             Employer employer = result.get();
             newJob.setEmployer(employer);
 
-
-//            employer.addJob(newJob);
             model.addAttribute("name", employer.getName());
             model.addAttribute("id", employer.getId());
             model.addAttribute("skills", skillObjs);
@@ -92,7 +87,6 @@ public class HomeController {
         } else {
             return "redirect:/";
         }
-
     }
 
 }
